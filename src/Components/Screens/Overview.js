@@ -10,7 +10,7 @@ class Overview extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Overview</Text>
+        <Text>Overview Screen</Text>
       </View>
     );
   }

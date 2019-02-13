@@ -5,15 +5,18 @@
 
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
+import { Provider } from "react-redux";
 
 import GitRepos from "./GitRepos";
+
+import store from "@store/index";
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <Provider store={store}>
         <GitRepos />
-      </View>
+      </Provider>
     );
   }
 }

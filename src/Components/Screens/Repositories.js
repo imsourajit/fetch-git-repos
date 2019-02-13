@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
+import { connect } from "react-redux";
+
 class Repositories extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Repositories",
@@ -10,13 +12,13 @@ class Repositories extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Repositories</Text>
+        <Text>Repositories Screen</Text>
       </View>
     );
   }
 }
 
-export default Repositories;
+export default connect()(Repositories);
 
 const styles = StyleSheet.create({
   container: {
