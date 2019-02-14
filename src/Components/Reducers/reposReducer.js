@@ -1,7 +1,13 @@
-import { GET_REPOS } from "@action/repos";
+import {
+  GET_REPOS,
+  GET_REPOS_SUCCEEDED,
+  GET_REPOS_FAILED,
+  SEARCH_REPO
+} from "@action/types";
 
 const initialState = {
-  repos: []
+  repos: [],
+  isFetching: false
 };
 
 const reposReducer = (state = initialState, action) => {
@@ -9,9 +15,36 @@ const reposReducer = (state = initialState, action) => {
     case GET_REPOS:
       return {
         ...state,
-        repos: ["munna"]
+        isFetching: true
       };
       break;
+
+    case GET_REPOS_SUCCEEDED:
+      return {
+        ...state,
+        repos: action.payload.repos,
+        isFetching: false
+      };
+      break;
+
+    case GET_REPOS_FAILED:
+      return {
+        ...state,
+        isFetching: false
+      };
+      break;
+
+    case SEARCH_REPO: {
+      return {
+        ...state,
+        repos: state.repos.filter(
+          repo =>
+            repo.name
+              .toLowerCase()
+              .indexOf(action.payload.searchText.toLowerCase()) > -1
+        )
+      };
+    }
 
     default:
       return state;

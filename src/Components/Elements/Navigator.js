@@ -26,9 +26,12 @@ const AppTopBarNavigator = createMaterialTopTabNavigator(
   {
     swipeEnabled: true,
     tabBarOptions: {
+      upperCaseLabel: false,
+      scrollEnabled: true,
       style: {
         backgroundColor: "#24282D",
-        borderWidth: 0
+        borderWidth: 0,
+        textTransform: "capitalize"
       }
     }
   }
@@ -50,7 +53,13 @@ const AppDrawNavigator = createDrawerNavigator(
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
-        fontWeight: "bold"
+        fontWeight: "bold",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%"
+      },
+      titleStyle: {
+        textAlign: "center"
       }
     }
   }

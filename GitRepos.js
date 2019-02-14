@@ -17,6 +17,8 @@ export default GitRepos;
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject
+    // ...StyleSheet.absoluteFillObject
+    flex: 1,
+    justifyContent: "center"
   }
 });

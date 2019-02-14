@@ -1,1 +1,4 @@
 export const GET_REPOS = "GET_REPOS";
+export const GET_REPOS_SUCCEEDED = "GET_REPOS_SUCCEEDED";
+export const GET_REPOS_FAILED = "GET_REPOS_FAILED";
+export const SEARCH_REPO = "SEARCH_REPO";

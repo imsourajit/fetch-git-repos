@@ -1,24 +1,29 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 
-import { connect } from "react-redux";
+import ReposList from "@containers/ReposList";
+
+import RepoCount from "@containers/RepoCount";
 
 class Repositories extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: "Repositories",
-    headerTitle: "Notifications"
+    title: "Repositories"
   });
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Repositories Screen</Text>
+        <ReposList />
       </View>
     );
   }
 }
 
-export default connect()(Repositories);
+export default Repositories;
 
 const styles = StyleSheet.create({
   container: {
