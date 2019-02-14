@@ -10,7 +10,7 @@ class Stars extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Stars</Text>
+        <Text>Stars Screen</Text>
       </View>
     );
   }

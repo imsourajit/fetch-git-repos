@@ -10,7 +10,7 @@ class Following extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Following</Text>
+        <Text>Following Screen</Text>
       </View>
     );
   }
